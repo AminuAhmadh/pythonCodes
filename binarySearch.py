@@ -10,10 +10,12 @@ def binary_search(ordered_list, item):
     while index_of_first_element <= index_of_last_element: 
         mid_point = (index_of_first_element + index_of_last_element)//2 
         if ordered_list[mid_point] == item: 
-            return mid_point 
+            return mid_point # RETURNS THE NORMAL COMPUTER-STYLE INDEX
         if item > ordered_list[mid_point]: 
             index_of_first_element = mid_point + 1 
         else: 
             index_of_last_element = mid_point - 1 
     if index_of_first_element > index_of_last_element: 
         return None
+
+print(binary_search([1,2,5,6,8], 8))
