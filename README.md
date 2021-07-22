@@ -1,1 +1,1 @@
-# python-Intermediate-Projects
+# Some random Python codes/projects
