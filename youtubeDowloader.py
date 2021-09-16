@@ -43,10 +43,9 @@ def size():
 print('TITLE:', yt.title)
 print('YOUTUBER/CHANNEL:', yt.author)
 print('LENGTH:', yt.length, 'seconds')
-print('RATING:', str(yt.rating))
 desc = pyinputplus.inputYesNo(prompt='Do you want to see the video description? ')
 if desc == 'yes':
-    print('The video description is:', yt.description)
+    print(yt.description)
 else:
     pass
 prompt = pyinputplus.inputYesNo(prompt='Download the video with 720p resolution? ')
@@ -55,8 +54,8 @@ if prompt == 'no':
     quit()
 else:
     print('Getting Video...')
-    print('Getting Resolution...')
     quality = highest_resolution
+    print('Getting Resolution...')
     file_size = quality.filesize
     print('RESOLUTION: 720p')
     size()
@@ -68,5 +67,4 @@ else:
         print("Error occured due to:", Downloaderror)
         exit()
 
-print("Downloaded Successfully!")
-
+print("Downloaded Successfully Into ", file_path)
