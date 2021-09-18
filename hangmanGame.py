@@ -2,7 +2,6 @@
 # GITHUB @AminuAhmadh
 
 
-
 import random
 import pyinputplus
 
@@ -17,7 +16,7 @@ fruits = ['apple', 'avocado', 'banana', 'cherry', 'cantaloupe', 'grape', 'guava'
 secretWordList = [] 
 
 print('Hangman Game. The objective of the game is to guess the right word choosing by the computer.')
-print('You can only guess one word/letter at a time')
+print('You can only guess one letter at a time')
 print("let's get started")
 
 
@@ -39,7 +38,7 @@ def secretword():
 guessesAllowed = len(secretWord) + 2
 
 while guessesAllowed != 0:
-    word = input('guess a word: ')
+    word = input('guess a letter from the word: ')
 
 
     if word in secretWord:
@@ -58,7 +57,7 @@ while guessesAllowed != 0:
         guessesAllowed -= 1
         print('You have',str(guessesAllowed),'Guesses left')
         if guessesAllowed == 0:
-            print('Sorry you lose. the secret word is', secretWord)
+            print('Sorry, you lose. the secret word is:', secretWord.upper())
         else:
             secretword()
             continue
